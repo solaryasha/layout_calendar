@@ -124,11 +124,26 @@ body {
 .calendar > div:nth-child(29)::before {
   content: "29"; }
 
+.calendar-29 > div:nth-child(-n+29) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .calendar > div:nth-child(30)::before {
   content: "30"; }
 
+.calendar-30 > div:nth-child(-n+30) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .calendar > div:nth-child(31)::before {
   content: "31"; }
+
+.calendar-31 > div:nth-child(-n+31) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .calendar-mon > div:first-child {
   grid-column-start: 1; }
@@ -150,25 +165,5 @@ body {
 
 .calendar-sun > div:first-child {
   grid-column-start: 7; }
-
-.calendar-28 > div:nth-child(-n+28) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.calendar-29 > div:nth-child(-n+29) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.calendar-30 > div:nth-child(-n+30) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.calendar-31 > div:nth-child(-n+31) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 /*# sourceMappingURL=main.css.map */
