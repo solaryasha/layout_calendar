@@ -40,6 +40,11 @@ body {
   .calendar > div:nth-child(#{$i})::before {
     content: "#{$i}";
   }
+  @if $i > 28 {
+    .calendar-#{$day-month} > div:nth-child(-n+#{$day-month}) {
+      display: flex;
+    }
+  }
 }
 
 $days: ("mon": 1, "tue": 2, "wed": 3, "thu": 4, "fri": 5, "sat": 6, "sun": 7);
@@ -47,13 +52,5 @@ $days: ("mon": 1, "tue": 2, "wed": 3, "thu": 4, "fri": 5, "sat": 6, "sun": 7);
 @each $day, $number in $days {
   .calendar-#{$day} > div:first-child {
     grid-column-start: $number;
-  }
-}
-
-$numdays: 28, 29, 30, 31 ;
-
-@each $day-month in $numdays {
-  .calendar-#{$day-month} > div:nth-child(-n+#{$day-month}) {
-    display: flex;
   }
 }
