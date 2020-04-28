@@ -41,7 +41,7 @@ body {
     content: "#{$i}";
   }
   @if $i > 28 {
-    .calendar-#{$day-month} > div:nth-child(-n+#{$day-month}) {
+    .calendar-#{$i} > div:nth-child(-n+#{$i}) {
       display: flex;
     }
   }
