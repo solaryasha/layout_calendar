@@ -8,26 +8,32 @@ body {
   font-size: 30px; }
 
 .calendar {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 25%);
+          transform: translate(-50%, 25%);
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-template-columns: repeat(7, 100px);
   grid-auto-rows: 100px;
   gap: 1px 1px; }
   .calendar div {
     height: 100px;
     display: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #eee;
-    border: 1px solid black;
+    border: 1px solid #000;
     -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
     transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
     transition: background-color 0.5s ease, transform 0.5s ease;
@@ -126,21 +132,26 @@ body {
 .calendar > div:nth-child(29)::before {
   content: "29"; }
 
+.calendar > div:nth-child(30)::before {
+  content: "30"; }
+
+.calendar > div:nth-child(31)::before {
+  content: "31"; }
+
+.calendar-28 > div:nth-child(-n+28) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .calendar-29 > div:nth-child(-n+29) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
-.calendar > div:nth-child(30)::before {
-  content: "30"; }
-
 .calendar-30 > div:nth-child(-n+30) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.calendar > div:nth-child(31)::before {
-  content: "31"; }
 
 .calendar-31 > div:nth-child(-n+31) {
   display: -webkit-box;
