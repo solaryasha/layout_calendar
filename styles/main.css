@@ -17,7 +17,7 @@ body {
   grid-template-columns: repeat(7, 100px);
   grid-auto-rows: 100px;
   gap: 1px 1px; }
-  .calendar > div {
+  .calendar div {
     height: 100px;
     display: none;
     -webkit-box-pack: center;
@@ -27,13 +27,15 @@ body {
         -ms-flex-align: center;
             align-items: center;
     background-color: #eee;
-    border: 1px solid black; }
+    border: 1px solid black;
+    -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+    transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    transition: background-color 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease; }
   .calendar div:hover {
     position: relative;
     -webkit-transform: translateY(-20px);
             transform: translateY(-20px);
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
     background-color: pink;
     cursor: pointer; }
 
