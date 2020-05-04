@@ -13,24 +13,28 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   display: grid;
   grid-template-columns: repeat(7, 100px);
   grid-auto-rows: 100px;
   gap: 1px 1px;
 
-  > div {
+  div {
     height: 100px;
     display: none;
     justify-content: center;
     align-items: center;
+
     background-color: #eee;
     border: 1px solid black;
+
+    transition: background-color 0.5s ease, transform 0.5s ease;
   }
 
   div:hover {
     position: relative;
     transform: translateY(-20px);
-    transition: 0.5s ease;
+
     background-color: pink;
     cursor: pointer;
   }
